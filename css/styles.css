@@ -38,14 +38,18 @@ ul {
 
 /* ХЕДЕР */
 
+header {
+  border-bottom: 1px solid #e7e9fc;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #e7e9fc;
 }
-.header-nav-panel {
+.header-flex-box {
   display: flex;
+  align-items: center;
 }
 
 .header-navigation-section {
@@ -90,12 +94,12 @@ ul {
   color: #404bbf;
 }
 
-.header .header-address {
+.header .header-flex-box {
   font-style: normal;
   display: flex;
   gap: 40px;
 }
-.header-address .header-mail-tel {
+.header-flex-box .header-mail-tel {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
@@ -103,11 +107,11 @@ ul {
   color: #434455;
 }
 
-.header-address .header-mail-tel:hover {
+.header-flex-box .header-mail-tel:hover {
   color: #404bbf;
 }
 
-.header-address .header-mail-tel:focus {
+.header-flex-box .header-mail-tel:focus {
   color: #404bbf;
 }
 
@@ -124,7 +128,6 @@ ul {
   letter-spacing: 0.02em;
   color: #fff;
   max-width: 496px;
- 
 }
 
 .banner .bunner-button {
@@ -166,7 +169,17 @@ ul {
   letter-spacing: 0.02em;
   color: #2e2f42;
   text-align: center;
-  visibility: hidden;  
+}
+
+.visually-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 .efficiency .efficiency-list-title {
@@ -213,7 +226,7 @@ ul {
   border-radius: 0 0 4px 4px;
 }
 
-.team-info-text-container{
+.team-info-text-container {
   padding: 32px 0;
 }
 .team-info .team-info-list-title {
@@ -235,7 +248,6 @@ ul {
   text-align: center;
 }
 /* СЕКЦІЯ ПОРТФОЛІО */
-
 
 .portfolio .portfolio-title {
   font-weight: 700;
@@ -260,8 +272,9 @@ ul {
   width: calc((100% - 48px) / 3);
 }
 
-.card-text-block{
+.card-text-block {
   padding: 32px 16px;
+  border: 1px solid #e7e9fc;
 }
 
 .portfolio .portfolio-list-title {
