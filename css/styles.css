@@ -171,7 +171,7 @@ header {
   text-align: center;
 }
 
-.visually-hidden{
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -180,6 +180,11 @@ header {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .efficiency .efficiency-list-title {
@@ -275,6 +280,7 @@ header {
 .card-text-block {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
+  border-top: none;
 }
 
 .portfolio .portfolio-list-title {
