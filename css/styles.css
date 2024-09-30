@@ -4,14 +4,54 @@ body {
   background-color: #ffffff;
 }
 
-a {
-  text-decoration: none;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
+
+a,
+img {
+  text-decoration: none;
+  display: block;
+}
+
 ul {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1158px;
+margin-left: auto;
+margin-right:auto;
+}
+
+.section{
+  padding: 120px 0;
 }
 
 /* ХЕДЕР */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-nav-panel {
+  display: flex;
+  gap: 76px;
+}
+
+.header-navigation {
+  display: flex;
+  gap: 40px;
+}
 
 .header .header-logo,
 .footer .footer-logo {
@@ -22,6 +62,7 @@ ul {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+  align-self: center;
 }
 
 .header-text-studio {
@@ -31,7 +72,6 @@ ul {
 .footer-text-studio {
   color: #f4f4fd;
 }
-/* СЕКЦІЯ З ВЕЛИКИМ ТЕКСТОМ ТА КНОПКОЮ */
 
 .header .header-list {
   font-weight: 500;
@@ -47,6 +87,8 @@ ul {
 
 .header .header-address {
   font-style: normal;
+  display: flex;
+  gap: 40px;
 }
 .header-address .header-mail-tel {
   font-weight: 400;
@@ -54,6 +96,8 @@ ul {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .header-address .header-mail-tel:hover {
@@ -64,8 +108,11 @@ ul {
   color: #404bbf;
 }
 
+/* СЕКЦІЯ З ВЕЛИКИМ ТЕКСТОМ ТА КНОПКОЮ */
 .banner {
   background-color: #2e2f42;
+  height: 600px;
+  text-align: center;
 }
 
 .banner .banner-title {
@@ -73,8 +120,11 @@ ul {
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
-  text-align: center;
   color: #fff;
+  padding-left: 472px;
+  padding-right: 472px;
+  padding-bottom: 48px;
+  display: block;
 }
 
 .banner .bunner-button {
@@ -86,6 +136,8 @@ ul {
   letter-spacing: 0.04em;
   color: #fff;
   cursor: pointer;
+  padding: 16px 32px;
+  border-radius: 4px;
 }
 
 .banner .bunner-button:hover,
@@ -95,12 +147,24 @@ ul {
 
 /* СЕКЦІЯ ПІД БАНЕРОМ, БЛОКИ З ЕФЕКТИВНІСТЮ ТА ОПИСОМ */
 
+.efficiency .efficiency-card {
+  display: flex;
+  justify-content: center;
+  gap: 24px ;
+  
+}
+ .efficiency-card-width{
+  flex-basis: 264px;
+ }
+
 .efficiency .efficiency-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  text-align: center;
+  opacity: 0;
 }
 
 .efficiency .efficiency-list-title {
@@ -109,6 +173,7 @@ ul {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 
 .efficiency-list-text {
@@ -124,6 +189,11 @@ ul {
 .team-info {
   background-color: #f4f4fd;
 }
+.team-info-card{
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
 
 .team-info .team-info-title {
   font-size: 36px;
@@ -132,10 +202,12 @@ ul {
   text-align: center;
   color: #2e2f42;
   text-transform: capitalize;
+  padding-bottom: 72px;
 }
 
 .team-info .team-info-backgraund-card {
   background-color: #fff;
+  padding-bottom: 32px;
 }
 
 .team-info .team-info-list-title {
@@ -144,6 +216,10 @@ ul {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  text-align: center;
+  margin-top:  32px;
+  margin-bottom: 8px;
+
 }
 
 .team-info .team-info-list-text {
@@ -152,6 +228,8 @@ ul {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  text-align: center;
+
 }
 /* СЕКЦІЯ ПОРТФОЛІО */
 
@@ -163,6 +241,20 @@ ul {
   text-align: center;
   color: #2e2f42;
   text-transform: capitalize;
+  padding-bottom: 72px;
+}
+
+.portfolio-card{
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 48px;
+  column-gap: 24px;
+  justify-content: center;
+}
+
+.portfolio-list-card{
+  padding-bottom: 32px;
+  
 }
 
 .portfolio .portfolio-list-title {
@@ -171,6 +263,8 @@ ul {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
+  margin-top: 32px;
 }
 
 .portfolio .portfolio-list-tex {
@@ -179,18 +273,26 @@ ul {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  
 }
 
 /* фУТЕР НИЖНЯ ЧАСТИНА СТОРІНКИ */
 
 .footer {
   background-color: #2e2f42;
+  min-height: 312px;
 }
 
 .footer .footer-text {
+  display: block;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
+  width: 264px;
+}
+
+.footer  .footer-logo{
+  padding: 100px 0 16px ;
 }
