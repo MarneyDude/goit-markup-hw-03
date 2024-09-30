@@ -28,11 +28,11 @@ ul {
 
 .container {
   max-width: 1158px;
-margin-left: auto;
-margin-right:auto;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
-.section{
+.section {
   padding: 120px 0;
 }
 
@@ -42,13 +42,13 @@ margin-right:auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #e7e9fc;
 }
 .header-nav-panel {
   display: flex;
-  gap: 76px;
 }
 
-.header-navigation {
+.header-navigation-section {
   display: flex;
   gap: 40px;
 }
@@ -65,6 +65,10 @@ margin-right:auto;
   align-self: center;
 }
 
+.header .header-logo {
+  margin-right: 76px;
+}
+
 .header-text-studio {
   color: #2e2f42;
 }
@@ -79,6 +83,7 @@ margin-right:auto;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  padding: 24px 0;
 }
 .header .header-list:hover,
 .header .header-list:focus {
@@ -96,8 +101,6 @@ margin-right:auto;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 
 .header-address .header-mail-tel:hover {
@@ -111,8 +114,7 @@ margin-right:auto;
 /* СЕКЦІЯ З ВЕЛИКИМ ТЕКСТОМ ТА КНОПКОЮ */
 .banner {
   background-color: #2e2f42;
-  height: 600px;
-  text-align: center;
+  padding: 188px 0;
 }
 
 .banner .banner-title {
@@ -121,13 +123,12 @@ margin-right:auto;
   line-height: 1.07;
   letter-spacing: 0.02em;
   color: #fff;
-  padding-left: 472px;
-  padding-right: 472px;
-  padding-bottom: 48px;
-  display: block;
+  max-width: 496px;
+ 
 }
 
 .banner .bunner-button {
+  display: block;
   background-color: #4d5ae5;
   color: #fff;
   font-weight: 500;
@@ -136,8 +137,10 @@ margin-right:auto;
   letter-spacing: 0.04em;
   color: #fff;
   cursor: pointer;
-  padding: 16px 32px;
   border-radius: 4px;
+  min-width: 169px;
+  height: 56px;
+  border: none;
 }
 
 .banner .bunner-button:hover,
@@ -150,12 +153,11 @@ margin-right:auto;
 .efficiency .efficiency-card {
   display: flex;
   justify-content: center;
-  gap: 24px ;
-  
+  gap: 24px;
 }
- .efficiency-card-width{
-  flex-basis: 264px;
- }
+.efficiency-card-width {
+  width: calc((100% - 72px) / 4);
+}
 
 .efficiency .efficiency-title {
   font-weight: 500;
@@ -164,7 +166,7 @@ margin-right:auto;
   letter-spacing: 0.02em;
   color: #2e2f42;
   text-align: center;
-  opacity: 0;
+  visibility: hidden;  
 }
 
 .efficiency .efficiency-list-title {
@@ -189,7 +191,7 @@ margin-right:auto;
 .team-info {
   background-color: #f4f4fd;
 }
-.team-info-card{
+.team-info-card {
   display: flex;
   justify-content: center;
   gap: 24px;
@@ -202,14 +204,18 @@ margin-right:auto;
   text-align: center;
   color: #2e2f42;
   text-transform: capitalize;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 
 .team-info .team-info-backgraund-card {
   background-color: #fff;
-  padding-bottom: 32px;
+  width: calc((100% - 72px) / 4);
+  border-radius: 0 0 4px 4px;
 }
 
+.team-info-text-container{
+  padding: 32px 0;
+}
 .team-info .team-info-list-title {
   font-weight: 500;
   font-size: 20px;
@@ -217,9 +223,7 @@ margin-right:auto;
   letter-spacing: 0.02em;
   color: #2e2f42;
   text-align: center;
-  margin-top:  32px;
   margin-bottom: 8px;
-
 }
 
 .team-info .team-info-list-text {
@@ -229,9 +233,9 @@ margin-right:auto;
   letter-spacing: 0.02em;
   color: #434455;
   text-align: center;
-
 }
 /* СЕКЦІЯ ПОРТФОЛІО */
+
 
 .portfolio .portfolio-title {
   font-weight: 700;
@@ -241,10 +245,10 @@ margin-right:auto;
   text-align: center;
   color: #2e2f42;
   text-transform: capitalize;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 
-.portfolio-card{
+.portfolio-card {
   display: flex;
   flex-wrap: wrap;
   row-gap: 48px;
@@ -252,9 +256,12 @@ margin-right:auto;
   justify-content: center;
 }
 
-.portfolio-list-card{
-  padding-bottom: 32px;
-  
+.portfolio-list-card {
+  width: calc((100% - 48px) / 3);
+}
+
+.card-text-block{
+  padding: 32px 16px;
 }
 
 .portfolio .portfolio-list-title {
@@ -264,7 +271,6 @@ margin-right:auto;
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 8px;
-  margin-top: 32px;
 }
 
 .portfolio .portfolio-list-tex {
@@ -273,14 +279,13 @@ margin-right:auto;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
-  
 }
 
 /* фУТЕР НИЖНЯ ЧАСТИНА СТОРІНКИ */
 
 .footer {
   background-color: #2e2f42;
-  min-height: 312px;
+  padding: 100px 0;
 }
 
 .footer .footer-text {
@@ -290,9 +295,10 @@ margin-right:auto;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
-  width: 264px;
+  max-width: 264px;
 }
 
-.footer  .footer-logo{
-  padding: 100px 0 16px ;
+.footer .footer-logo {
+  display: inline-block;
+  margin-bottom: 16px;
 }
